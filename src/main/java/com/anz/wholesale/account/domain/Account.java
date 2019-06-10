@@ -9,10 +9,10 @@ import java.util.Date;
 
 @Data
 @Builder
-@Entity
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 @Table(name = "ACCOUNT")
 public class Account implements Serializable {
 

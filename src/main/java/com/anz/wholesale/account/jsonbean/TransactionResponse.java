@@ -4,18 +4,20 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @Builder
 public class TransactionResponse {
 
-    Long id;
-    String accountId;
-    String accountNumber;
-    String accountName;
-    String currency;
-    BigDecimal debitAmount;
-    BigDecimal creditAmount;
-    String debitCredit;
-    String transactionNumber;
+    private Long id;
+    private Long accountId;
+    private String accountNumber;
+    private String accountName;
+    private Date valueDate;
+    private String currency;
+    private BigDecimal debitAmount;
+    private BigDecimal creditAmount;
+    private String debitCredit;
+    private String transactionNumber;
 }

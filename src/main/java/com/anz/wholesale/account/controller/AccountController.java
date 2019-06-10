@@ -38,11 +38,11 @@ public class AccountController {
         return ResponseEntity.ok().body(accounts);
     }
 
-    @GetMapping(value = "/{accountId}/transactions")
-    public ResponseEntity<List<TransactionResponse>> getTransactions(
-            @PathVariable @NotNull Long accountId) {
+    @GetMapping(value = "/{accountNumber}/transactions")
+    public ResponseEntity<List<TransactionResponse>> getTransctions(
+            @PathVariable @NotNull String accountNumber) {
 
-        List<TransactionResponse> transactions = accountService.getTransactions(accountId);
+        List<TransactionResponse> transactions = accountService.getTransactions(accountNumber);
 
         if (transactions == null || transactions.size() == 0) {
             return ResponseEntity.notFound().build();
@@ -50,6 +50,7 @@ public class AccountController {
 
         return ResponseEntity.ok().body(transactions);
     }
+
     @GetMapping(value = "/test")
     public void test(){
         log.info("Test");

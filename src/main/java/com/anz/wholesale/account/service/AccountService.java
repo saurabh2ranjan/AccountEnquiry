@@ -26,7 +26,7 @@ public class AccountService {
         return AccountMapper.toAccountResponse(accountRepository.findByUserId(userId));
     }
 
-    public List<TransactionResponse> getTransactions(long accountId) {
-        return TransactionMapper.toTransactionResponse(transactionRepository.findByAccountId(accountId));
+    public List<TransactionResponse> getTransactions(String accountNumber) {
+        return TransactionMapper.toTransactionResponse(transactionRepository.findByAccountNumber(accountNumber));
     }
 }

@@ -1,17 +1,17 @@
 package com.anz.wholesale.account.domain;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @Builder
+@EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "TRANSACTION")
 public class Transaction implements Serializable {
@@ -19,8 +19,11 @@ public class Transaction implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
-    private Long accountId;
+    @ManyToOne
+    @JoinColumn(name = "accountId")
+    private Account account;
     private String currency;
+    private Date valueDate;
     private BigDecimal debitAmount;
     private BigDecimal creditAmount;
     private String debitCredit;

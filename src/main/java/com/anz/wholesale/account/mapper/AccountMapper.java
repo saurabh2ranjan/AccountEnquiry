@@ -21,7 +21,7 @@ public class AccountMapper {
 
     public static AccountResponse toAccountResponse(Account account) {
         AccountResponse accountResponse = AccountResponse.builder().build();
-        BeanUtils.copyProperties(account, accountResponse); // TODO: msp few properties manually
+        BeanUtils.copyProperties(account, accountResponse);
         return accountResponse;
     }
 }
