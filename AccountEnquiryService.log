@@ -1,0 +1,19 @@
+2019-06-10 19:38:36,068 [nio-8081-exec-1] DEBUG .m.a.HttpEntityMethodProcessor -  -Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-06-10 19:38:36,073 [nio-8081-exec-1] DEBUG .m.a.HttpEntityMethodProcessor -  -Writing [[AccountResponse(id=1, userId=user1, accountNumber=100001, accountName=Account Name1, accountType=Sa (truncated)...]
+2019-06-10 19:38:36,133 [nio-8081-exec-1] DEBUG EntityManagerInViewInterceptor -  -Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2019-06-10 19:38:36,135 [nio-8081-exec-1] DEBUG o.s.w.s.DispatcherServlet      -  -Completed 200 OK
+2019-06-10 19:38:55,662 [nio-8081-exec-2] DEBUG o.s.w.s.DispatcherServlet      -  -GET "/account/user1", parameters={}
+2019-06-10 19:38:55,663 [nio-8081-exec-2] DEBUG a.RequestMappingHandlerMapping -  -Mapped to public org.springframework.http.ResponseEntity<java.util.List<com.anz.wholesale.account.jsonbean.AccountResponse>> com.anz.wholesale.account.controller.AccountController.getAccounts(java.lang.String)
+2019-06-10 19:38:55,663 [nio-8081-exec-2] DEBUG EntityManagerInViewInterceptor -  -Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2019-06-10 19:38:55,664 [nio-8081-exec-2] INFO  c.a.w.a.c.AccountController    -  -AccountController:Start.
+2019-06-10 19:38:55,664 [nio-8081-exec-2] DEBUG o.s.o.j.JpaTransactionManager  -  -Found thread-bound EntityManager [SessionImpl(706086948<open>)] for JPA transaction
+2019-06-10 19:38:55,665 [nio-8081-exec-2] DEBUG o.s.o.j.JpaTransactionManager  -  -Creating new transaction with name [com.anz.wholesale.account.service.AccountService.getAccounts]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-06-10 19:38:55,665 [nio-8081-exec-2] DEBUG o.s.o.j.JpaTransactionManager  -  -Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@287e97c4]
+2019-06-10 19:38:55,668 [nio-8081-exec-2] DEBUG o.s.o.j.JpaTransactionManager  -  -Initiating transaction commit
+2019-06-10 19:38:55,668 [nio-8081-exec-2] DEBUG o.s.o.j.JpaTransactionManager  -  -Committing JPA transaction on EntityManager [SessionImpl(706086948<open>)]
+2019-06-10 19:38:55,668 [nio-8081-exec-2] DEBUG o.s.o.j.JpaTransactionManager  -  -Not closing pre-bound JPA EntityManager after transaction
+2019-06-10 19:38:55,668 [nio-8081-exec-2] INFO  c.a.w.a.c.AccountController    -  -AccountController:End.
+2019-06-10 19:38:55,670 [nio-8081-exec-2] DEBUG .m.a.HttpEntityMethodProcessor -  -Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2019-06-10 19:38:55,670 [nio-8081-exec-2] DEBUG .m.a.HttpEntityMethodProcessor -  -Writing [[AccountResponse(id=1, userId=user1, accountNumber=100001, accountName=Account Name1, accountType=Sa (truncated)...]
+2019-06-10 19:38:55,672 [nio-8081-exec-2] DEBUG EntityManagerInViewInterceptor -  -Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2019-06-10 19:38:55,672 [nio-8081-exec-2] DEBUG o.s.w.s.DispatcherServlet      -  -Completed 200 OK
