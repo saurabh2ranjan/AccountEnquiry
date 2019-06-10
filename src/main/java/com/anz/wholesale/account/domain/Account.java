@@ -23,7 +23,6 @@ public class Account implements Serializable {
     private String accountNumber;
     private String accountName;
     //@Enumerated(EnumType.STRING)
-    
     private String accountType;
     private Date balanceDate;
     private String currency;
