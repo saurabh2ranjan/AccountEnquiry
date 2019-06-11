@@ -9,7 +9,6 @@ import java.util.Date;
 
 @Data
 @Builder
-@EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -22,7 +21,6 @@ public class Account implements Serializable {
     private String userId;
     private String accountNumber;
     private String accountName;
-    //@Enumerated(EnumType.STRING)
     private String accountType;
     private Date balanceDate;
     private String currency;

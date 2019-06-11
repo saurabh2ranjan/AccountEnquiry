@@ -19,5 +19,6 @@ CREATE TABLE TRANSACTION (
     debit_amount DOUBLE,
     credit_amount DOUBLE,
     debit_credit VARCHAR(50) NOT NULL,
-    transaction_number VARCHAR(100) NOT NULL
+    transaction_number VARCHAR(100) NOT NULL,
+    FOREIGN KEY  (account_id) REFERENCES ACCOUNT (id)
 );
